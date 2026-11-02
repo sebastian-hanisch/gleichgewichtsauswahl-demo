@@ -1,7 +1,6 @@
 # Welche Konvention überlebt? Auswahl durch Rauschen – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-gleichgewichtsauswahl-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-gleichgewichtsauswahl-demo.streamlit.app/)**
 
 Zweites Stück der Reihe **Koordinationsspiele** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Vehikel: **Palettenformat.** Viele Betriebe wählen das neue Format (S) oder das alte (H); die Auszahlung ist die Zeitersparnis je Sendung in Minuten, und es lohnt sich nur, dasselbe zu wählen wie die anderen. Jeder Betrieb entscheidet sich immer wieder neu und liegt gelegentlich daneben (Logit: die bessere Wahl ist wahrscheinlicher, nie sicher). Die Demo rechnet **exakt**, auf welche Konvention die Gruppe auf Dauer läuft, **wie scharf die Wahl sein muss**, damit überhaupt eine entsteht, was sich für **große Gruppen** ändert, ob das Ergebnis am **Fehlermodell** hängt und wann eine **Simulation** die Antwort nicht mehr erreicht.
 
@@ -170,4 +169,4 @@ pytest tests/ -v
 
 Gebaut mit Streamlit, Plotly, NumPy und fpdf2.
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Koordinationsspiele: von Gleichwahl bis Kaskade](https://sebastianhanisch.net/konzepte-koordinationsspiele.html).
