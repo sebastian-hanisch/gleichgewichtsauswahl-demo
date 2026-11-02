@@ -252,10 +252,10 @@ def verdict_e4(count_rows: list[dict], finite_rows: list[dict], typed_rows: list
     logit_diff = finite_rows[0]["logit"] - finite_rows[1]["logit"]
     high_hi = typed_rows[0]["high"]
     low_lo = typed_rows[-1]["low"]
-    tip = f" Gezählte Kippschwelle ε_H = {sci(tipping)}." if tipping is not None else ""
+    tip = f" Gezählte Kippschwelle der Endpunkte (π(alle S) = π(alle H)) ε_H = {sci(tipping)}; die Masse bei „fast alle S“ gleicht der bei „fast alle H“ erst bei etwa 9,5·10^-4." if tipping is not None else ""
     return "info", (f"Gleichmäßige Fehler: Die Steigung von log₁₀(π(alle S)/π(alle H)) je Dekade von ε stimmt in {exact} von {len(count_rows)} Zellen mit der Zählung (Zahl Δ > 0) − (Zahl Δ < 0) überein; "
                     f"in der endlichen Gruppe unterscheiden sie p* kaum (größter Unterschied der Masse {de(first_diff, 4)}), der Logit schon ({de(logit_diff, 3)}). "
-                    f"Typabhängige Fehler kippen die Auswahl: Masse bei S {pct(high_hi)} bei ε_H = {sci(typed_rows[0]['eps_h'])}, Masse bei H {pct(low_lo)} bei ε_H = {sci(typed_rows[-1]['eps_h'])}.{tip}")
+                    f"Typabhängige Fehler kippen die Auswahl (gemessen bei p* = 1/4, n = 40): Masse bei S {pct(high_hi)} bei ε_H = {sci(typed_rows[0]['eps_h'])}, Masse bei H {pct(low_lo)} bei ε_H = {sci(typed_rows[-1]['eps_h'])}.{tip}")
 
 
 # ---------------------------------------------------------------------------------------------------------------------------- E5

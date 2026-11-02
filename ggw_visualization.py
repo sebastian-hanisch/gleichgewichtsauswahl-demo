@@ -155,7 +155,7 @@ def build_typed_tipping(rows: list[dict], tipping: float | None) -> go.Figure:
     fig.add_trace(go.Scatter(x=xs, y=[r["low"] for r in rows], mode="lines+markers", name="fast alle H", line=dict(color=C.COLOR_H)))
     fig.add_trace(go.Scatter(x=xs, y=[r["mid"] for r in rows], mode="lines+markers", name="Mitte", line=dict(color=C.COLOR_MID)))
     if tipping is not None:
-        fig.add_trace(go.Scatter(x=[tipping, tipping], y=[0, 1], mode="lines", name="gezählte Kippschwelle", line=dict(color=C.COLOR_RED, dash="dash")))
+        fig.add_trace(go.Scatter(x=[tipping, tipping], y=[0, 1], mode="lines", name="gezählte Kippschwelle der Endpunkte", line=dict(color=C.COLOR_RED, dash="dash")))
     fig.update_xaxes(title_text="Fehlerrate ε_H (H ist beste Antwort, S wird trotzdem gewählt)", type="log", autorange="reversed")
     fig.update_yaxes(title_text="Masse", range=[-0.02, 1.02])
     return _base(fig)
